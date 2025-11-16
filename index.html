@@ -259,7 +259,7 @@
 
     <div class="columns is-centered">
         <div class="column is-full-width">
-          <h2 class="title is-4">Overview</h2>
+          <h2 class="title is-4">Overview Pipeline</h2>
           <div class="column content">
             <!-- <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
@@ -267,10 +267,11 @@
 
             <div class="content has-text-justified">
               <p>
-                <strong>Our proposed network.</strong> For each input RGB image, we first extract its DINO features, depth, and normal map. Then,
-                the RGB and depth images are inputted into the shadow removal network. The network includes several Context-aware Swin
-                Attention (CSA) layers, each comprising two Swin self-attention blocks. Unlike traditional self-attention, our block explicitly
-                involves semantic-aware and geometry-aware attention weights.
+                  <strong>Our proposed network.</strong> PhaSR achieves physical alignment through two stages: 
+                (1) PAN performs model-free illumination normalization via Gray-world correction and log-domain Retinex decomposition, 
+                and (2) a multi-scale Transformer encoder-decoder integrates DINO-v2 semantic embeddings and DepthAnything-v2 geometric priors 
+                through GSRA's cross-modal differential attention (A_rect = A_sem - λ·A_geo), enabling robust reflectance recovery 
+                from single-light shadows to multi-source ambient lighting.
               </p>
             </div>
           </div>
@@ -410,15 +411,23 @@
 </section>
 
   
-  <footer class="footer">
-    <div class="container">
-      <div class="columns is-centered">
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="content has-text-centered">
         <p>
           This page is modified from the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> template.
         </p>
+        <p>
+          Our work builds upon <a href="https://blackjoke76.github.io/Projects/OmniSR/">OmniSR</a>, 
+          <a href="https://github.com/VanLinLin/DenseSR">DenseSR</a>, and 
+          <a href="https://arxiv.org/abs/2410.05258">Differential Transformer</a>. 
+          We are grateful for their outstanding contributions.
+        </p>
       </div>
     </div>
-  </footer>
+  </div>
+</footer>
   
 </body>
 </html>
