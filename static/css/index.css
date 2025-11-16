@@ -264,23 +264,26 @@ body {
 .afterLabel,
 .beforeLabel {
   position: absolute;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.85);  /* 更深的背景,增加對比度 */
   color: white;
-  padding: 4px 8px;
-  font-size: 11px;
-  font-weight: 600;
+  padding: 3px 6px;                 /* 更小的 padding */
+  font-size: 9px;                   /* 更小的字體 */
+  font-weight: 700;                 /* 加粗字體 */
   border-radius: 3px;
   pointer-events: none;
+  letter-spacing: 0.3px;            /* 增加字距,提高可讀性 */
 }
 
 .bal-afterPosition {
-  top: 10px;
-  right: 10px;
+  top: auto;          /* 取消 top */
+  bottom: 8px;        /* 移到底部 */
+  right: 8px;         /* 右下角 */
 }
 
 .bal-beforePosition {
-  top: 10px;
-  left: 10px;
+  top: auto;
+  bottom: 8px;        /* 移到底部 */
+  left: 8px;          /* 左下角 */
 }
 
 /* 響應式設計 - 在小螢幕上改為垂直排列 */
