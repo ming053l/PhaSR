@@ -169,16 +169,14 @@
     <div class="hero-body">
       <img src="./static/images/PhaSR-motivation.png" alt="PhaSR Motivation" style="width: 100%;">
       <h2 class="subtitle has-text-centered" style="margin-top: 20px;">
-        <strong>Why PhaSR?</strong> Prior methods lose physical priors through encoder-decoder bottlenecks, 
-        failing to accurately localize shadows in feature space (see feature visualizations above). 
-        <span class="dnerf">PhaSR</span> maintains physical alignment through <strong>dual-level prior integration</strong>: 
-        parameter-free Retinex normalization (PAN) + geometric-semantic cross-modal attention (GSRA), 
-        achieving robust shadow removal from single-light to multi-source ambient lighting.
+        <strong>Motivation:</strong> Existing methods lose physical priors through encoder-decoder bottlenecks, 
+        failing to localize shadows accurately (see feature visualizations above). 
+        <span class="dnerf">PhaSR</span> addresses this via <strong>dual-level physically aligned priors</strong>, 
+        generalizing from single-light to multi-source ambient lighting scenarios.
       </h2>
     </div>
   </div>
 </section>
-
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -188,43 +186,45 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Shadow removal under diverse lighting conditions requires disentangling illumination from intrinsic reflectance—a challenge compounded when physical priors are not properly aligned.
+            Shadow removal under diverse lighting requires disentangling illumination from intrinsic reflectance—
+            a challenge when physical priors are misaligned.
           </p>
           <p>
-            We propose PhaSR (Physically Aligned Shadow Removal), addressing this through dual-level prior alignment to enable robust performance from single-light shadows to multi-source ambient lighting. First, Physically Aligned Normalization (PAN) performs closed-form illumination correction via Gray-world normalization, log-domain Retinex decomposition, and dynamic range recombination, suppressing chromatic bias. Second, Geometric-Semantic Rectification Attention (GSRA) extends differential attention to cross-modal alignment, harmonizing depth-derived geometry with DINO-v2 semantic embeddings to resolve modal conflicts under varying illumination.
+            We propose <strong>PhaSR</strong> with dual-level prior alignment: 
+            <strong>(1) PAN</strong> performs parameter-free illumination correction via Gray-world normalization 
+            and log-domain Retinex decomposition, suppressing chromatic bias. 
+            <strong>(2) GSRA</strong> extends differential attention to harmonize depth-derived geometry 
+            with DINO-v2 semantics, resolving modal conflicts across illumination conditions.
           </p>
           <p>
-            Experiments show competitive performance in shadow removal with lower complexity and generalization to ambient lighting where traditional methods fail under multi-source illumination.
+            Experiments demonstrate competitive performance with lower complexity, 
+            generalizing to ambient lighting where traditional methods fail.
           </p>
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
 
-
     <div class="columns is-centered">
-        <div class="column is-full-width">
-          <h2 class="title is-4">Overview Pipeline</h2>
-          <div class="column content">
-            <img style="margin-top: -10px;" src="static/images/PhaSR_main.png">
-
-            <div class="content has-text-justified">
-              <p>
-                  <strong>Our proposed network.</strong> PhaSR achieves physical alignment through two stages: 
-                (1) PAN performs model-free illumination normalization via Gray-world correction and log-domain Retinex decomposition, 
-                and (2) a multi-scale Transformer encoder-decoder integrates DINO-v2 semantic embeddings and DepthAnything-v2 geometric priors 
-                through GSRA's cross-modal differential attention (A_rect = A_sem - λ·A_geo), enabling robust reflectance recovery 
-                from single-light shadows to multi-source ambient lighting.
-              </p>
-            </div>
-          </div>
-          <h2 class="title is-4">Qualitative Results</h2>
-
+      <div class="column is-full-width">
+        <h2 class="title is-4">Network Architecture</h2>
+        <div class="column content">
+          <img style="margin-top: -10px;" src="static/images/PhaSR_main.png">
           <div class="content has-text-justified">
-            <img style="width: 960px; height: 300px;" src="static/images/PhaSR_results.png">
+            <p>
+              A multi-scale Transformer encoder-decoder integrates frozen DINO-v2 semantic features 
+              and DepthAnything-v2 geometric priors via GSRA's cross-modal differential attention 
+              (A<sub>rect</sub> = A<sub>sem</sub> - λ·A<sub>geo</sub>).
+            </p>
           </div>
         </div>
+
+        <h2 class="title is-4">Qualitative Results</h2>
+        <div class="content has-text-justified">
+          <img style="width: 960px; height: 300px;" src="static/images/PhaSR_results.png">
+        </div>
       </div>
+    </div>
   </div>
 </section>
 
