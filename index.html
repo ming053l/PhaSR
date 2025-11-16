@@ -535,17 +535,12 @@
 <!-- Initialize comparison sliders after DOM is loaded -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM loaded, initializing sliders...');
+    
     // Initialize all comparison sliders
-    new BeforeAfter({ id: '#compare1' });
-    new BeforeAfter({ id: '#compare2' });
-    new BeforeAfter({ id: '#compare3' });
-    new BeforeAfter({ id: '#compare4' });
-    new BeforeAfter({ id: '#compare5' });
-    new BeforeAfter({ id: '#compare6' });
-    new BeforeAfter({ id: '#compare7' });
-    new BeforeAfter({ id: '#compare8' });
-    new BeforeAfter({ id: '#compare9' });
-    new BeforeAfter({ id: '#compare10' });
+    for (let i = 1; i <= 10; i++) {
+      new BeforeAfter({ id: '#compare' + i });
+    }
   });
 </script>
   
