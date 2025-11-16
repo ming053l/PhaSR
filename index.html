@@ -256,17 +256,33 @@
     </div>
     <!--/ Abstract. -->
 
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+    <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-4">Overview</h2>
+          <div class="column content">
+            <!-- <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+            <img style="margin-top: -10px;" src="static/images/PhaSR_main.png">
+
+            <div class="content has-text-justified">
+              <p>
+                <strong>Our proposed network.</strong> For each input RGB image, we first extract its DINO features, depth, and normal map. Then,
+                the RGB and depth images are inputted into the shadow removal network. The network includes several Context-aware Swin
+                Attention (CSA) layers, each comprising two Swin self-attention blocks. Unlike traditional self-attention, our block explicitly
+                involves semantic-aware and geometry-aware attention weights.
+              </p>
+            </div>
+          </div>
+          <h2 class="title is-4">Our rendered direct shadow, indirect shadow and shadow free picture</h2>
+
+          <!-- Interpolating. -->
+          <!-- <h3 class="title is-4">Interpolation</h3> -->
+          <div class="content has-text-justified">
+            <img style="width: 960px; height: 300px;" src="static/images/render.jpg">
+          </div>
         </div>
       </div>
-    </div>
-    <!--/ Paper video. -->
   </div>
 </section>
 
