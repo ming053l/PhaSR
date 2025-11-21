@@ -41,7 +41,7 @@ PhaSR addresses these challenges through **dual-level physically aligned prior i
 ## Updates
 
 - ✅ 2025-11-16: Project page released.
-- ⏳ Code and pretrained models coming soon.
+- ⏳ Pretrained models coming soon.
 
 ### Installation
 ```bash
