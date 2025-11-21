@@ -54,6 +54,9 @@ pip install -r requirements.txt
 ```
 
 ## Dataset Structure
+[ISTD](https://drive.google.com/file/d/1I0qw-65KBA6np8vIZzO6oeiOvcDBttAY/view), [ISTD+](https://drive.google.com/file/d/1rsCSWrotVnKFUqu9A_Nw9Uf-bJq_ryOv/view?usp=sharing), [WSRD+](https://github.com/fvasluianu97/WSRD-DNSR), [SRD](https://github.com/jinyeying/DC-ShadowNet-Hard-and-Soft-Shadow-Removal), [Ambient6k](https://github.com/fvasluianu97/IFBlend)
+
+
 ```bash
 dataset/
 ├── train
