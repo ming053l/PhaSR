@@ -2,9 +2,9 @@
 
 # PhaSR: Generalized Image Shadow Removal with Physically Aligned Priors
 
-<img src="./static/images/PhaSR_logo.png" width="600"/>
+<img src="./images/PhaSR_logo.png" width="600"/>
 
-## [[Paper Link]](https://arxiv.org/abs/XXXX.XXXXX) [[Project Page]](https://ming053l.github.io/PhaSR/) [[Model zoo]](https://drive.google.com/drive/folders/XXXXX) [[Visual Results]](https://drive.google.com/drive/folders/XXXXX)
+## [[Paper Link]](https://arxiv.org/abs/2601.17470) [[Project Page]](https://ming053l.github.io/PhaSR_github/) [[Model zoo]](https://drive.google.com/drive/folders/XXXXX) [[Visual Results]](https://drive.google.com/drive/folders/XXXXX)
 
 [Chia-Ming Lee](https://ming053l.github.io/), [Yu-Fan Lin](https://vanlinlin.github.io/), Yu-Jou Hsiao, Jing-Hui Jung, [Yu-Lun Liu](https://www.cmlab.csie.ntu.edu.tw/~yulunliu/), [Chih-Chung Hsu](https://cchsu.info/)
 
@@ -28,7 +28,7 @@ PhaSR addresses these challenges through **dual-level physically aligned prior i
 
 2. **GSRA (Geometric-Semantic Rectification Attention)** - Cross-modal differential attention (`A_rect = A_sem - λ·A_geo`) harmonizing DepthAnything-v2 geometry with DINO-v2 semantics.
 
-<img src="./static/images/PhaSR_main.png" width="1600"/>
+<img src="./images/PhaSR_main.png" width="1600"/>
 
 **Benchmark results on shadow removal and ambient lighting normalization.**
 
@@ -140,11 +140,14 @@ bash train.sh
 
 If our work is helpful to your research, please kindly cite:
 ```bibtex
-@article{lee2024phasr,
-  title={PhaSR: Generalized Image Shadow Removal with Physically Aligned Priors},
-  author={Lee, Chia-Ming and Lin, Yu-Fan and Hsiao, Yu-Jou and Jung, Jing-Hui and Liu, Yu-Lun and Hsu, Chih-Chung},
-  journal={arXiv preprint arXiv:XXXX.XXXXX},
-  year={2024}
+@misc{lee2024phasr,
+      title={PhaSR: Generalized Image Shadow Removal with Physically Aligned Priors}, 
+      author={Lee, Chia-Ming and Lin, Yu-Fan and Hsiao, Yu-Jou and Jung, Jing-Hui and Liu, Yu-Lun and Hsu, Chih-Chung},
+      year={2026},
+      eprint={2601.17470},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2601.17470}, 
 }
 ```
 
