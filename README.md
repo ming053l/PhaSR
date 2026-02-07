@@ -76,32 +76,11 @@ git clone https://github.com/DepthAnything/Depth-Anything-V2.git
 ```
 2. Download the [pretrain model of depth anything v2](https://huggingface.co/depth-anything/Depth-Anything-V2-Large/resolve/main/depth_anything_v2_vitl.pth?download=true)
 
-3. Run ```calculate_depth.py``` to create the depth map
-* You need to change the ```--source-root``` and ```--ckpt-path``` to your dataset and Depth Anything v2 ckpt path.
-  * e.g. ```python calculate_depth.py --source-root dataset/train --ckpt-paht path_to_depth_anything_v2_ckpt```
-```python
-python get_depth_normap.py
+3. Run ```calculate_depth_normal.py``` to create the depth and normal map
+* You need to change the ```--root``` and ```--ckpt-path``` to your dataset and Depth Anything v2 ckpt path.
+  * e.g. ```python calculate_depth_normal.py --root dataset/train(absolute path) --ckpt-path path_to_depth_anything_v2_ckpt```
 
-dataset/
-├── train
-      ├── origin <- Shadow-affected images
-      ├── depth <- .npy depth maps
-      ├── shadow_free <- Shadow-free images
-├── valid
-      ├── origin <- Shadow-affected images
-      ├── depth <- .npy depth maps
-      ├── shadow_free <- Shadow-free images
-├── test
-      ├── origin <- Shadow-affected images
-      ├── depth <- .npy depth maps
 ```
-
-4. Run ```calculate_normal.py``` to create the normal map.
-* You need to change the ```--source-root``` to your dataset path.
-  * e.g. ```python calculate_depth.py --source-root dataset/train```
-```python
-python calculate_normal.py
-
 dataset/
 ├── train
       ├── origin <- Shadow-affected images
