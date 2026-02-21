@@ -1,6 +1,6 @@
 <div align="center">
 
-# PhaSR: Generalized Image Shadow Removal with Physically Aligned Priors (CVPR 2026)
+# PhaSR: Generalized Image Shadow Removal with Physically Aligned Priors
 
 <img src="./images/PhaSR_logo.png" width="600"/>
 
@@ -9,6 +9,8 @@
 [Chia-Ming Lee](https://ming053l.github.io/), [Yu-Fan Lin](https://vanlinlin.github.io/), Yu-Jou Hsiao, Jin-Hui Jiang, [Yu-Lun Liu](https://www.cmlab.csie.ntu.edu.tw/~yulunliu/), [Chih-Chung Hsu](https://cchsu.info/)
 
 National Yang Ming Chiao Tung University, National Cheng Kung University
+
+CVPR 2026
 
 </div>
 
