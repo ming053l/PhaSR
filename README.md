@@ -136,5 +136,8 @@ If our work is helpful to your research, please kindly cite:
 
 Our work builds upon [OmniSR](https://github.com/xxx/omnisr), [DenseSR](https://github.com/xxx/densesr), [DepthAnything-v2](https://github.com/xxx/depth-anything-v2), and [DINO-v2](https://github.com/facebookresearch/dinov2). We are grateful for their outstanding contributions.
 
+This study was supported in part by the National Science and Technology Council (NSTC), Taiwan, under grants 112-2221-E-006-157-MY3, 114-2627-M-A49-003, 114-2218-E-035-001, and 114-2119-M-006-007. We thank the National Center for High-performance Computing (NCHC) of National Applied Research Laboratories (NARLabs) in Taiwan for providing computational and storage resources.
+
+
 ## Contact
 If you have any questions, please email Chia-Ming Lee(zuw408421476@gmail.com), Yu-Fan Lin(aas12as12as12tw@gmail.com) to discuss with the authors.
