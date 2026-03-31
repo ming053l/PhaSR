@@ -43,6 +43,7 @@ PhaSR addresses these challenges through **dual-level physically aligned prior i
 ## Updates
 
 - ✅ 2025-11-16: Project page released.
+- ✅ 2026-03-31: Training and testing script released.
 - ⏳ Pretrained models coming soon.
 
 ### Installation
