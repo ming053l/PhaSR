@@ -31,9 +31,13 @@ PhaSR addresses these challenges through **dual-level physically aligned prior i
 2. **GSRA (Geometric-Semantic Rectification Attention)** - Cross-modal differential attention (`A_rect = A_sem - λ·A_geo`) harmonizing DepthAnything-v2 geometry with DINO-v2 semantics.
 
 <img src="./images/PhaSR_main.png" width="1600"/>
+
 <div align="center">
-  <video src="images/PANScene.mp4" width="800" controls></video>
+  <video width="800" controls>
+    <source src="./images/PANScene.mp4" type="video/mp4">
+  </video>
 </div>
+
 **Benchmark results on shadow removal and ambient lighting normalization.**
 
 | Model | Params | FLOPs | ISTD+ | WSRD+ | Ambient6K |
