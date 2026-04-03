@@ -4,7 +4,7 @@
 
 <img src="./images/PhaSR_logo.png" width="600"/>
 
-## [[Paper Link]](https://arxiv.org/abs/2601.17470) [[Project Page]](https://ming053l.github.io/PhaSR_github/) [[Model zoo]](https://drive.google.com/drive/folders/XXXXX) [[Visual Results]](https://drive.google.com/drive/folders/XXXXX)
+## [[Paper Link]](https://arxiv.org/abs/2601.17470) [[Project Page]](https://ming053l.github.io/PhaSR_github/) [[Model zoo]](https://drive.google.com/drive/folders/10h6CxVZpJGEkXd7g0e1HLTvibehOT-fq) [[Visual Results]](https://drive.google.com/drive/folders/XXXXX)
 
 [Chia-Ming Lee](https://ming053l.github.io/), [Yu-Fan Lin](https://vanlinlin.github.io/), Yu-Jou Hsiao, Jin-Hui Jiang, [Yu-Lun Liu](https://www.cmlab.csie.ntu.edu.tw/~yulunliu/), [Chih-Chung Hsu](https://cchsu.info/)
 
@@ -44,8 +44,8 @@ PhaSR addresses these challenges through **dual-level physically aligned prior i
 
 - ✅ 2025-11-16: Project page released.
 - ✅ 2026-03-31: Training and testing script released.
-- ⏳ Pretrained models coming soon.
-
+- ✅ 2026-04-03: Pretrained models released.
+  
 ### Installation
 ```bash
 git clone https://github.com/ming053l/phasr.git
