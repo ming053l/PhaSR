@@ -143,9 +143,10 @@ with torch.no_grad():
                 psnr_val_rgb_list.extend(list)
 
                 # calculate the RMSE in LAB space
-                rmse_temp = np.abs(cv2.cvtColor(restored, cv2.COLOR_RGB2LAB) - cv2.cvtColor(rgb_gt, cv2.COLOR_RGB2LAB)).mean() * 3
+                rmse_temp = np.sqrt(((cv2.cvtColor(restored.astype(np.float32), cv2.COLOR_RGB2LAB) - 
+                            cv2.cvtColor(rgb_gt.astype(np.float32), cv2.COLOR_RGB2LAB)) ** 2).mean())
                 rmse_temp = torch.tensor(rmse_temp).to(device)
-                list = utils.distributed_concat(ssim_val_rgb, dist.get_world_size())
+                list = utils.distributed_concat(rmse_temp, dist.get_world_size())
                 rmse_val_rgb_list.extend(list)
 
                 rest_t = torch.from_numpy(restored.transpose(2,0,1)).unsqueeze(0).float().to(device)
