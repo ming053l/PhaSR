@@ -1,1 +1,5 @@
-CUDA_VISIBLE_DEVICES=0 python -m torch.distributed.launch --nproc_per_node 1 --master_port 29500 ./train_DDP.py 
+#!/bin/bash
+CUDA_VISIBLE_DEVICES=0 python train.py \
+    --train_dir dataset/train \
+    --val_dir dataset/valid \
+    --save_dir runs/phasr
